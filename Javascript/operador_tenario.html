@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Ternario</title>
+
+
+    <script>
+
+    var nota = prompt("Digite a nota do aluno")
+
+    var faltas = prompt("Digite a quantidade de faltas do aluno")
+
+    var media = 7
+    
+    var quantidade_faltas = 15
+
+    //Estrutura normal, onde apos um resultado podemos fazer mais operações
+
+    /*
+    if(nota >= media && faltas <= quantidade_faltas){
+        document.write("Aprovado")
+    }else{
+        document.write("Reprovado")
+    }
+
+*/
+    //Operador ternario é uma estrutura mais enchuta onde retorna apenas verdadeiro ou falso e nao podemos fazer mais operação
+
+    // var resultado = (condição ) ? <true> : <falso>
+
+    var resultado =  (nota >= media && faltas <= quantidade_faltas) ? 'Aprovado' : 'Reprovado'
+
+    document.write(resultado)
+    </script>
+</head> 
+<body>
+    
+</body>
+</html>

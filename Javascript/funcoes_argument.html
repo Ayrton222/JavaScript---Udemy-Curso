@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Funções Arguments</title>
+    
+	</head>
+
+    <script>
+
+       function soma(){
+
+        var resultado = 0
+        for( var i in arguments){ // arguments = array 
+                resultado += arguments[i]
+
+        } 
+
+        return resultado
+       }
+
+       document.write(soma(7,5,3.2,0.8, 'Texto'))
+
+       //Arguments ira percorrer os parametros passado
+
+    </script>
+
+  <body>
+   
+  </body>	
+
+</html>

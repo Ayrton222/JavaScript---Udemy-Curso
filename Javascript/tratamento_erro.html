@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Try catch</title>
+    
+	</head>
+
+    <script>
+
+        var video = Array()
+
+        video[1] = Array()
+        video[1]['nome'] = "Fullmetal Alchemist"
+        video[1]['categoria'] = "Anime"
+
+        function getVideo(video){
+
+            //Erro
+
+            /*
+            console.log(video[0]) //Dara undefined (normal) 
+
+            console.log(video[0]['nome']) // Dara erro pois nao existe
+
+            console.log("A aplicação nao morreu") // caso nao de erro ira aparecer essa mensagem
+
+            */
+
+
+            // tente 
+            try{
+                console.log(video[0]['nome'])
+
+            } catch(e){ //recebe o erro
+                console.log("Agora podemos tratar o erro")
+                throw new Error("Houve um erro mas estamos trabalhando nisso") // lançar um erro
+            
+            } finally{ //finalmente
+                console.log("Sempre passa por aqui")
+            }
+
+            console.log("A aplicação nao morreu")
+        }
+
+        getVideo(video)
+    </script>
+
+  <body>
+   
+  </body>	
+
+</html>

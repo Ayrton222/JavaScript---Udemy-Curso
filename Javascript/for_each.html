@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>For each</title>
+    
+	</head>
+
+    <script>
+
+        var listaConvidados = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+
+          // listaConvidados.forEach(função de callback passando 3 parametros)
+
+          listaConvidados.forEach(function(valor,indice,array){
+
+            //percorrendo array
+              document.write("Indice: " + indice + " | Valor: " + valor + "<br />")
+
+              document.write("<hr /> ")
+
+              //alterando valor
+
+              if(valor == 'Lucas'){
+                  array[indice] = "Um novo valor"
+              }
+          })
+
+          
+
+    </script>
+
+  <body>
+   
+  </body>	
+
+</html>

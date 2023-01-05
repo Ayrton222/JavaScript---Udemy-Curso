@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+
+    <script>
+      
+        var data = new Date()
+
+        /*
+        //Para pegar o dia 
+
+        document.writeln(data.getDate())
+
+        //Para pega o mes - ele considera 0 - 11 (dezembro seria 11) para trazer 12 teria que somar mais 1
+        document.writeln(data.getMonth() + 1)
+
+        //Para pegar o ano
+
+        document.writeln(data.getFullYear())
+
+        */
+
+         //remover/adicionar data
+        document.write(data.toString()) // para pegar o dia
+        data.setDate(data.getDate() + 1) // para setar o dia para remover e so trocar o ( + ) para ( - ) 
+        document.write(" <hr />")
+        document.write(data.toString())
+
+        document.write(" <br / > <br / > <hr />")
+
+         //remover/adicionar meses
+         document.write(data.toString()) // para pegar o mes
+        data.setMonth(data.getMonth() + 1) // para setar o mes para remover e so trocar o ( + ) para ( - ) 
+        document.write(" <hr />")
+        document.write(data.toString())
+
+        document.write(" <br / > <br / > <hr />")
+
+         //remover/adicionar ano
+         document.write(data.toString()) // para pegar o ano
+        data.setFullYear(data.getFullYear() + 1) // para setar o ano para remover e so trocar o ( + ) para ( - ) 
+        document.write(" <hr />")
+        document.write(data.toString())
+
+        document.write(" <br / > <br / > <hr />")
+
+        //Criar datas
+
+        var data1 = new Date(2022, 0, 23)
+
+        var data2 = new Date(2022, 1, 30)
+
+        document.write(data1.toString())
+        document.write(" <hr />")
+        document.write(data2.toString())
+
+        document.write(" <br / > <br / > <hr />")
+
+        // Para calcular datas
+
+        document.write(data1.getTime())
+        document.write(" <hr />")
+        document.write(data2.getTime())
+
+        // é inicialmente calculado os milisegundo de 1 de janeiro de 1970 ate a data colocada
+
+        document.write(" <br / > <br / > <hr />")
+
+        //Para encontrar a quantidade de milisegundo entre data1 e data2
+
+        document.write(data1.getTime() - data2.getTime())
+      
+        document.write(" <br / > <br / > <hr />")
+
+        //Math.abs() para trazer o valor absoluto do produto
+
+        var milissegundos_entre_dias = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milissegundos_entre_dias)
+
+        // descobrir quantos dias tem nesses milisegundos
+
+        // 1 dia = 24h, 1h = 60min, 1min = 60seg, 1seg = 1000 milissegundo 
+
+        var milissegundos_por_dia = (1*24*60*60*1000)
+        document.write(" 1 dia tem: " + milissegundos_por_dia + " = " + " Milissegundos ")
+
+        document.write(" <br / > <br / > <hr />")
+
+        document.write(Math.ceil(milissegundos_entre_dias / milissegundos_por_dia))
+        
+
+    </script>
+</head> 
+<body>
+    
+</body>
+</html>
