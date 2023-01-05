@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title> Destructuring Array</title>
+ 
+    <script>
+
+        //Destructuring - tira valores de uma estrutura
+
+        //Array
+
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+
+        //desturcturing
+        //Pegando os indices 0 e 1
+
+       // let [a, b] = frutas
+        
+        //pegando os indices 0, 1 e 3  
+        //let [a, b, , c] = frutas - pular indice
+
+        //valor default 
+
+        let [a,b,c,d, e = 'Valor default']  = frutas
+
+        //console.log(a, b,c,d,e)
+
+         //Array multidimensional
+
+         let coisas =[['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['Jose', 'Maria']]
+
+         // Pula o primeiro Array, pula o 1 valor do 2 array
+         let [,[,n2]] = coisas
+
+         let [[, , n3], [,]] = coisas
+
+         console.log(n3)
+    </script>
+</head>
+ 
+<body>
+    <div id="output"></div>
+</body>
+ 
+</html>

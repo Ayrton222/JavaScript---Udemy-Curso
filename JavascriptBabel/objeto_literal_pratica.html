@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title></title>
+ 
+    <script>
+
+        let nome = 'Jorge'
+        let idade = 29
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+
+        // ES5
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo:  function(){
+                document.write(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao} <br />` )
+            }
+        }
+        console.log(objeto)
+        objeto.exibirResumo()
+
+        // ES6
+
+        //em casos que a chave tem o mesmo nome que o objeto valor, podemos omitir
+
+        let objeto2 = {
+            nome,
+            idade,
+            sexo,
+            profissao,
+            exibirResumo(){
+                document.write(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao} <br />` )
+            }
+        }
+
+        console.log(objeto2)
+        objeto2.exibirResumo()
+
+        document.write("<hr />")
+        //Mudando valores 
+
+        let pessoa = {
+            nome: 'Jose',
+            idade: 45
+        }
+
+        document.write(`${pessoa.nome} <br />`)
+        document.write(`${pessoa.idade} <br />`)
+
+        pessoa.nome = 'Fernanda'
+        pessoa.idade = 32
+
+        document.write(`${pessoa.nome} <br />`)
+        document.write(`${pessoa.idade} <br />`)
+
+
+        //Incluindo atributos
+
+        pessoa.sexo = 'Feminino'
+
+        console.log(pessoa)
+
+        //funcao
+
+        pessoa.dizerOi = () => console.log("Ola, tudo bem?")
+
+        pessoa.dizerOi()
+
+    </script>
+</head>
+ 
+<body>
+    <div id="output"></div>
+</body>
+ 
+</html>

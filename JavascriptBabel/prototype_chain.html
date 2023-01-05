@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title> Prototype Chain</title>
+ 
+    <script>
+       
+
+       // Objetc Prototype
+
+       // para fazer a 'herança': __proto__: nome da variavel
+     let animal = { atributo1: 'a'}
+     let vertebrado = { atributo2: 'b'}
+     let ave = { __proto__: vertebrado, atributo3: 'c'}
+
+     console.log(ave.atributo2)
+
+
+    </script>
+</head>
+ 
+<body>
+    <div id="output"></div>
+</body>
+ 
+</html>

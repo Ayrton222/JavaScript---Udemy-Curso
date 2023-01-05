@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title></title>
+ 
+    <script>
+        //funcao construida apartir do operador new
+        let Carro = function(){
+            this.cor = 'Amarelo'
+            this.modelo = 'Chevette'
+            this.velocidadeAtual = 0
+            this.velocidadeMaxima = 180
+            
+            //metodos em funcoes construtoras tambem sao apartir do this
+
+            this.acelerar = function(){
+                let velocidade = this.getVelocidadeAtual() + 50
+                if(velocidade > this.velocidadeMaxima){
+                    velocidade = this.velocidadeMaxima
+                }
+                this.setVelocidadeAtual(velocidade)
+            }
+
+            this.getVelocidadeAtual = function(){
+                return this.velocidadeAtual
+            }
+
+            this.setVelocidadeAtual = function (velocidadeAtual) {
+                this.velocidadeAtual = velocidadeAtual
+            }
+
+        }
+
+        let carro = new Carro()
+
+        document.write(`A velocidade atual é: ${carro.getVelocidadeAtual()} <br />`)
+        carro.acelerar()
+        document.write(`A velocidade atual é: ${carro.getVelocidadeAtual()} <br />`)
+        carro.acelerar()
+        document.write(`A velocidade atual é: ${carro.getVelocidadeAtual()} <br />`)
+        carro.acelerar()
+        document.write(`A velocidade atual é: ${carro.getVelocidadeAtual()} <br />`)
+        carro.acelerar()
+        document.write(`A velocidade atual é: ${carro.getVelocidadeAtual()} <br />`)
+        carro.acelerar()
+        document.write(`A velocidade atual é: ${carro.getVelocidadeAtual()} <br />`)
+
+        document.write("<hr />")
+
+        //Encapsulamento
+
+        let Carro2 = function(){
+            
+            //private
+            var velocidadeMaxima = 180
+            var quilometrosRodados = 0
+            
+            this.cor = 'Amarelo'
+            this.modelo = 'Chevette'
+            this.velocidadeAtual = 0
+        
+            //metodos em funcoes construtoras tambem sao apartir do this
+
+            this.acelerar = function(){
+                let velocidade = this.getVelocidadeAtual() + 50
+                if(velocidade > velocidadeMaxima){
+                    velocidade = velocidadeMaxima
+                }
+                this.setVelocidadeAtual(velocidade)
+
+               setQuilometrosRodados(0.07)
+            }
+
+            this.getVelocidadeAtual = function(){
+                return this.velocidadeAtual
+            }
+
+            this.setVelocidadeAtual = function (velocidadeAtual) {
+                this.velocidadeAtual = velocidadeAtual
+            }
+
+            var setQuilometrosRodados = function(q){
+                quilometrosRodados += q
+            }
+
+        }
+
+        let carro2 = new Carro2()
+
+        document.write(`A velocidade atual é: ${carro2.getVelocidadeAtual()} <br />`)
+        carro2.acelerar()
+        document.write(`A velocidade atual é: ${carro2.getVelocidadeAtual()} <br />`)
+        carro2.acelerar()
+        document.write(`A velocidade atual é: ${carro2.getVelocidadeAtual()} <br />`)
+        carro2.acelerar()
+        document.write(`A velocidade atual é: ${carro2.getVelocidadeAtual()} <br />`)
+        carro2.acelerar()
+        document.write(`A velocidade atual é: ${carro2.getVelocidadeAtual()} <br />`)
+        carro2.acelerar()
+        document.write(`A velocidade atual é: ${carro2.getVelocidadeAtual()} <br />`)
+
+    </script>
+</head>
+ 
+<body>
+    <div id="output"></div>
+</body>
+ 
+</html>

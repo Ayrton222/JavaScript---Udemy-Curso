@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title> Prototype</title>
+ 
+    <script>
+       
+      //Objeto liteal
+
+      let a1 = {
+          cor: 'Branco',
+          modelo: 'Airbus a380',
+          levantarVoo: function(){ document.write("Levantar Voo")}
+      }
+
+      //Funcao construtora
+
+      let aviaoF = function(){
+          this.cor = 'Azul',
+          this.modelo = 'Boeing 787',
+          this.levantarVoo = function(){ document.write("Levantar Voo")}
+      }
+
+      let a2 = new aviaoF()
+
+
+      //classe
+
+      class AviaoC {
+          constructor(){
+              this.cor = 'Vermelho',
+              this.modelo = 'Embraer E-Jets'
+          }
+
+          levantarVoo(){
+              document.write("Levantar Voo")
+          }
+      }
+
+      let a3 = new AviaoC()
+
+      console.log(a1)
+      
+      console.log(a2)
+      
+      console.log(a3)
+    </script>
+</head>
+ 
+<body>
+    <div id="output"></div>
+</body>
+ 
+</html>

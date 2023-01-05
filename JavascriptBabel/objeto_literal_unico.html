@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title></title>
+ 
+    <script>
+
+        let assinatura ={
+            idCliente: 1000,
+            descricao: 'Acessoa a internet',
+            status(){
+                console.log("Ativo")
+            }
+        }
+
+        console.log(assinatura.descricao)
+
+        //referencia de assinatura esta sendo associada a variavel y
+
+        let y = assinatura
+
+        console.log(y.descricao)
+
+        y.descricao = "Internet  + tv + telefone"
+
+        console.log(y.descricao)
+
+    </script>
+</head>
+ 
+<body>
+    <div id="output"></div>
+</body>
+ 
+</html>

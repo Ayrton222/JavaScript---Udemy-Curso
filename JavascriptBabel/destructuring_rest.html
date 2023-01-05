@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title> Destructuring Funcoes</title>
+ 
+    <script>
+
+        //Destructuring - tira valores de uma estrutura
+
+        //Rest
+
+        //Array com rest
+
+        /*
+        let arr = [10,20,30,40]
+
+        let [ a, ...resto]  = arr
+
+        console.log(a)
+        console.log(resto)
+        */
+
+        //Objetos com rest
+
+        let obj = {
+            a: 10, b: 20, c:30, d:40
+        }
+
+        let { a , ...resto} = obj
+        console.log(a)
+        console.log(resto)
+
+    </script> 
+</head>
+ 
+<body>
+    <div id="output"></div>
+</body>
+ 
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title> Destructuring Objetos</title>
+ 
+    <script>
+
+        //Destructuring - tira valores de uma estrutura
+
+        //Objetos 
+        
+
+        let produto = {
+            descricao: 'Notebook',
+            preco: 1800,
+            detalhes: { //Objeto literal dentro de objeto literal
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+
+        //retirando o valor desejado
+
+      //  let { descricao , preco } = produto
+
+      //Passando como variavel
+
+     let { descricao:d , preco: p } = produto
+
+
+     //Pegando de  um objeto dentro de um objeto
+
+     let { detalhes: {fabricante: f, modelo: m }} = produto
+
+        console.log(f, m)
+    </script> 
+</head>
+ 
+<body>
+    <div id="output"></div>
+</body>
+ 
+</html>
